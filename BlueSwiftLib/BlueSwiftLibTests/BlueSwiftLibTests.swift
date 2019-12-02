@@ -11,7 +11,10 @@ import XCTest
 
 class BlueSwiftLibTests: XCTestCase {
 
+    var blueSwiftLib: BlueSwiftLib!
+
     override func setUp() {
+        blueSwiftLib = BlueSwiftLib()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
@@ -30,5 +33,8 @@ class BlueSwiftLibTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testAdd() {
+        XCTAssertEqual(blueSwiftLib.add(a: 1, b: 1), 2)
+    }
 }

@@ -18,6 +18,7 @@
 		0DEBF73D2394FC5A004B5C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEBF73B2394FC5A004B5C58 /* LaunchScreen.storyboard */; };
 		0DEBF7482394FC5B004B5C58 /* BlueSwiftLibExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF7472394FC5B004B5C58 /* BlueSwiftLibExampleTests.swift */; };
 		0DEBF7532394FC5B004B5C58 /* BlueSwiftLibExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF7522394FC5B004B5C58 /* BlueSwiftLibExampleUITests.swift */; };
+		0DEBF75F239512EF004B5C58 /* BlueSwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF75E239512EF004B5C58 /* BlueSwiftLib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		0DEBF74E2394FC5B004B5C58 /* BlueSwiftLibExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueSwiftLibExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEBF7522394FC5B004B5C58 /* BlueSwiftLibExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSwiftLibExampleUITests.swift; sourceTree = "<group>"; };
 		0DEBF7542394FC5B004B5C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DEBF75E239512EF004B5C58 /* BlueSwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSwiftLib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				0DEBF7132394F616004B5C58 /* BlueSwiftLib.h */,
 				0DEBF7142394F616004B5C58 /* Info.plist */,
+				0DEBF75E239512EF004B5C58 /* BlueSwiftLib.swift */,
 			);
 			path = BlueSwiftLib;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				TargetAttributes = {
 					0DEBF70F2394F616004B5C58 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					0DEBF7182394F616004B5C58 = {
 						CreatedOnToolsVersion = 11.0;
@@ -381,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DEBF75F239512EF004B5C58 /* BlueSwiftLib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +586,7 @@
 		0DEBF7252394F616004B5C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -596,6 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.blueLib.BlueSwiftLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -604,6 +611,7 @@
 		0DEBF7262394F616004B5C58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -627,6 +635,7 @@
 		0DEBF7282394F616004B5C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BlueSwiftLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -644,6 +653,7 @@
 		0DEBF7292394F616004B5C58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BlueSwiftLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
