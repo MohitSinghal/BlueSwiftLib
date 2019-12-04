@@ -11,4 +11,4 @@ env:
     - TEST_SDK=iphonesimulator13.0 OS=13.0 NAME='iPhone 11'
 
 script:
-  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project BlueSwiftLib.xcodeproj -scheme SwiftyLib -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
+  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project BlueSwiftLib.xcodeproj -scheme BlueSwiftLib -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
