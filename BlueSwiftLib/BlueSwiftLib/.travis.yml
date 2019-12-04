@@ -1,16 +1,35 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
- os: osx
+language: swift
+os: osx
 
-script: "rake"
+git:
+  depth: 1
 
-osx_image: xcode11.0
-env:
-  matrix:
-    - TEST_SDK=iphonesimulator13.0 OS=13.0 NAME='iPhone 11 Pro'
-    - TEST_SDK=iphonesimulator13.0 OS=13.0 NAME='iPhone 11'
+stages:
+  - name: test
 
-script:
-  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project BlueSwiftLib.xcodeproj -scheme BlueSwiftLib -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
+branches:
+  only:
+  - master
+
+jobs:
+  include:
+    - stage: test
+      name: Run Unit Tests (iOS, Xcode 11)
+      osx_image: xcode11
+      script: Scripts/test.sh -d "OS=13.0,name=iPhone 11"
+
+    - stage: test
+      name: Run Unit Tests (iOS, Xcode 11.2)
+      osx_image: xcode11
+      script: Scripts/test.sh -d "OS=13.0,name=iPhone 11"
+
+    - stage: test
+      name: Run Thread Safety Tests (TSan Enabled)
+      osx_image: xcode11
+      script: Scripts/test.sh -s "BlueSwiftLib Thread Safety Tests" -d "OS=13.0,name=iPhone 11"
+
+    - stage: test
+      name: Run Performance Tests
+      osx_image: xcode11
+      script: Scripts/test.sh -s "BlueSwiftLib Performance Tests" -d "OS=13.0,name=iPhone 11"
+
