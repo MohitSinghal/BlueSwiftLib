@@ -1,35 +1,5 @@
-language: swift
 os: osx
-
-git:
-  depth: 1
-
-stages:
-  - name: test
-
-branches:
-  only:
-  - master
-
-jobs:
-  include:
-    - stage: test
-      name: Run Unit Tests (iOS, Xcode 11)
-      osx_image: xcode11
-      script: Scripts/test.sh -d "OS=13.0,name=iPhone 11"
-
-    - stage: test
-      name: Run Unit Tests (iOS, Xcode 11.2)
-      osx_image: xcode11
-      script: Scripts/test.sh -d "OS=13.0,name=iPhone 11"
-
-    - stage: test
-      name: Run Thread Safety Tests (TSan Enabled)
-      osx_image: xcode11
-      script: Scripts/test.sh -s "BlueSwiftLib Thread Safety Tests" -d "OS=13.0,name=iPhone 11"
-
-    - stage: test
-      name: Run Performance Tests
-      osx_image: xcode11
-      script: Scripts/test.sh -s "BlueSwiftLib Performance Tests" -d "OS=13.0,name=iPhone 11"
+osx_image: xcode11.0
+language: swift
+script: xcodebuild clean build test -project BlueSwiftLib/BlueSwiftLib.xcodeproj -scheme BlueSwiftLib -sdk iphonesimulator -destination "platform=iOS Simulator,OS=13.0,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
