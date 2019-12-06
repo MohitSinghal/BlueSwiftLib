@@ -19,11 +19,6 @@
 		0DEBF7482394FC5B004B5C58 /* BlueSwiftLibExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF7472394FC5B004B5C58 /* BlueSwiftLibExampleTests.swift */; };
 		0DEBF7532394FC5B004B5C58 /* BlueSwiftLibExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF7522394FC5B004B5C58 /* BlueSwiftLibExampleUITests.swift */; };
 		0DEBF75F239512EF004B5C58 /* BlueSwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF75E239512EF004B5C58 /* BlueSwiftLib.swift */; };
-		0DEF9EE5239786210010D6A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DEF9EE4239786210010D6A0 /* .travis.yml */; };
-		0DEF9EE6239786210010D6A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DEF9EE4239786210010D6A0 /* .travis.yml */; };
-		0DEF9EE7239786210010D6A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DEF9EE4239786210010D6A0 /* .travis.yml */; };
-		0DEF9EE8239786210010D6A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DEF9EE4239786210010D6A0 /* .travis.yml */; };
-		0DEF9EE9239786210010D6A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DEF9EE4239786210010D6A0 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +67,6 @@
 		0DEBF7522394FC5B004B5C58 /* BlueSwiftLibExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSwiftLibExampleUITests.swift; sourceTree = "<group>"; };
 		0DEBF7542394FC5B004B5C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DEBF75E239512EF004B5C58 /* BlueSwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSwiftLib.swift; sourceTree = "<group>"; };
-		0DEF9EE4239786210010D6A0 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +138,6 @@
 			children = (
 				0DEBF7132394F616004B5C58 /* BlueSwiftLib.h */,
 				0DEBF7142394F616004B5C58 /* Info.plist */,
-				0DEF9EE4239786210010D6A0 /* .travis.yml */,
 				0DEBF75E239512EF004B5C58 /* BlueSwiftLib.swift */,
 			);
 			path = BlueSwiftLib;
@@ -351,7 +344,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEF9EE5239786210010D6A0 /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +351,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEF9EE6239786210010D6A0 /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +360,6 @@
 			files = (
 				0DEBF73D2394FC5A004B5C58 /* LaunchScreen.storyboard in Resources */,
 				0DEBF73A2394FC5A004B5C58 /* Assets.xcassets in Resources */,
-				0DEF9EE7239786210010D6A0 /* .travis.yml in Resources */,
 				0DEBF7382394FC58004B5C58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +368,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEF9EE8239786210010D6A0 /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +375,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEF9EE9239786210010D6A0 /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
